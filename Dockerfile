@@ -31,9 +31,9 @@ RUN unzip awscliv2.zip && \
            /usr/local/aws-cli/v2/*/dist/awscli/data/ac.index
 
 # Install Docker CLI - useful for local development
-RUN apk add --no-cache docker-cli=20.10.6-r1
+RUN apk add --no-cache docker-cli=20.10.3-r1
 
 # Install Git - required for actions/checkout@v2
-RUN apk add --no-cache git=2.31.1-r1
+RUN apk add --no-cache git=2.30.2-r0
 
 ENTRYPOINT [ "ash" ]
