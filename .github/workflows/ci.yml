@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: "ghcr.io/templatr/nodejs-devenv"
+  IMAGE_NAME: "ghcr.io/techcentr/nodejs-devenv"
 
 jobs:
   build:
