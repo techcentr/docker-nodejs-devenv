@@ -41,6 +41,7 @@ jobs:
         run: "docker tag $IMAGE_NAME:$RELEASE_VERSION $IMAGE_NAME:latest"
 
       - name: "Log into ghcr.io"
+        if: env.RELEASE_VERSION != ''
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: "Push versioned image"
