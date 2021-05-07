@@ -8,6 +8,7 @@ ADD https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/
 ADD https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-bin-${GLIBC_VER}.apk /tmp/glibc-bin.apk
 ADD https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-i18n-${GLIBC_VER}.apk /tmp/glibc-i18n.apk
 
+# hadolint ignore=DL3018 (version is pinned by downloading a specific version of the package)
 RUN apk add --no-cache \
     /tmp/glibc.apk \
     /tmp/glibc-bin.apk \
@@ -29,9 +30,9 @@ RUN unzip awscliv2.zip && \
            /usr/local/aws-cli/v2/*/dist/awscli/data/ac.index
 
 # Install Docker CLI - useful for local development
-RUN apk add --no-cache docker-cli
+RUN apk add --no-cache docker-cli=20.10.6-r1
 
 # Install Git - required for actions/checkout@v2
-RUN apk add --no-cache git
+RUN apk add --no-cache git=2.31.1-r1
 
 ENTRYPOINT [ "ash" ]
