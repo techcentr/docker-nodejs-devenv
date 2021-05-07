@@ -1,0 +1,21 @@
+{
+  "name": "techcentr-nodejs-devenv",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techcentr/docker-nodejs-devenv"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  },
+  "author": "Lukas Holota",
+  "license": "MIT"
+}
