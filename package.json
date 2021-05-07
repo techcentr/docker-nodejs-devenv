@@ -7,7 +7,7 @@
     "url": "git+https://github.com/techcentr/docker-nodejs-devenv"
   },
   "release": {
-    "branch": "master",
+    "branch": "main",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
