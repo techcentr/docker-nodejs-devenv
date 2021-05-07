@@ -8,7 +8,8 @@ ADD https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/
 ADD https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-bin-${GLIBC_VER}.apk /tmp/glibc-bin.apk
 ADD https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VER}/glibc-i18n-${GLIBC_VER}.apk /tmp/glibc-i18n.apk
 
-# hadolint ignore=DL3018 (version is pinned by downloading a specific version of the package)
+# Not required - version is pinned by downloading a specific version of the package
+# hadolint ignore=DL3018
 RUN apk add --no-cache \
     /tmp/glibc.apk \
     /tmp/glibc-bin.apk \
