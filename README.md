@@ -1,12 +1,12 @@
 ## Pulling the image
 
-```
-docker pull ...tba...
+```bash
+docker pull ghcr.io/techcentr/nodejs-devenv
 ```
 
 ## Available tags
 
-- `nodejs-devenv:<version>-node14-alpine` - based on NodeJS v14 alpine image
+- `ghcr.io/techcentr/nodejs-devenv` - based on NodeJS v14 alpine image
 
 ## Installed software
 The image contains other required software. For full list, check the [Dockerfile](./Dockerfile).
