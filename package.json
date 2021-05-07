@@ -8,8 +8,7 @@
   },
   "release": {
     "branches": [
-      "main",
-      "feat/v1"
+      "main"
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
