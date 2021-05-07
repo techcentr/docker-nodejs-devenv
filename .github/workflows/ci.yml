@@ -9,9 +9,9 @@ env:
   IMAGE_NAME: "ghcr.io/templatr/nodejs-devenv"
 
 jobs:
-  permissions:
   build:
     runs-on: ubuntu-latest
+    permissions:
     steps:
       - uses: actions/checkout@v2
 
