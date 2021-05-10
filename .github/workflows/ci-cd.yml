@@ -13,6 +13,7 @@ jobs:
     permissions:
       contents: write
       packages: write 
+      issues: write # Required to add comments to released issues
     steps:
       - uses: actions/checkout@v2
 
