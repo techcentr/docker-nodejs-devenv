@@ -19,7 +19,7 @@ jobs:
         run: echo ::set-output name=docker_tag::$(echo ${GITHUB_REF} | cut -d'/' -f3)-${GITHUB_SHA}
 
       - name: Verify Dockerfile with Hadolint
-        uses: brpaz/hadolint-action@v1.4.0
+        uses: brpaz/hadolint-action@v1.5.0
 
       - name: Build Docker image
         run: docker build . -t ${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }}

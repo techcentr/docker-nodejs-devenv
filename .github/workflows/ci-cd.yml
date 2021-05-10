@@ -22,7 +22,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Verify Dockerfile with Hadolint
-        uses: brpaz/hadolint-action@v1.4.0
+        uses: brpaz/hadolint-action@v1.5.0
 
       - name: "Build Docker image"
         if: env.RELEASE_VERSION != ''
