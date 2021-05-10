@@ -22,7 +22,8 @@ RUN apk add --no-cache \
 # Install AWS CLI
 ADD https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip ./awscliv2.zip
 
-RUN unzip awscliv2.zip && \
+RUN apk add --no-cache groff=1.22.4-r1 less=563-r0 && \
+    unzip awscliv2.zip && \
     ./aws/install && \
     # Clean up
     rm -rf ./awscliv2.zip \
