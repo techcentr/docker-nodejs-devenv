@@ -1,4 +1,4 @@
-FROM node:14.16-alpine3.13
+FROM node:16.6.2-alpine3.13
 
 # Install glibc compatibility for alpine - required by AWS CLI v2
 ENV GLIBC_VER=2.31-r0
